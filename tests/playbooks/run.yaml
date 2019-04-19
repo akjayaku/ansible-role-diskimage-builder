@@ -22,7 +22,7 @@
   post_tasks:
     - name: Register diskimage_builder_git_dest_stat.
       stat:
-        path: /home/zuul/src/git.openstack.org/openstack/diskimage-builder
+        path: /home/zuul/src/opendev.org/openstack/diskimage-builder
       register: diskimage_builder_git_dest_stat
       when: diskimage_builder_install_method == 'git'
 

@@ -3,7 +3,7 @@
     pre-run: tests/playbooks/pre.yaml
     run: tests/playbooks/run.yaml
     roles:
-      - zuul: openstack/ansible-role-diskimage-builder
+      - zuul: windmill/ansible-role-diskimage-builder
 
 # Testing for diskimage_builder_install_method: pip
 - job:
