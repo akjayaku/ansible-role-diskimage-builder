@@ -20,3 +20,14 @@
     version: "{{ diskimage_builder_pip_version|default(omit) }}"
     virtualenv_python: "{{ diskimage_builder_pip_virtualenv_python|default(omit) }}"
     virtualenv: "{{ diskimage_builder_pip_virtualenv|default(omit) }}"
+
+- name: Symlink diskimage-builder virtualenv
+  become: true
+  file:
+    src: "{{ diskimage_builder_pip_virtualenv }}"
+    dest: "{{ diskimage_builder_pip_virtualenv_symlink }}"
+    state: link
+  when:
+    - diskimage_builder_pip_virtualenv is defined
+    - diskimage_builder_pip_virtualenv_symlink is defined
+    - diskimage_builder_pip_virtualenv != diskimage_builder_pip_virtualenv_symlink

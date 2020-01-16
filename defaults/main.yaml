@@ -30,3 +30,4 @@ diskimage_builder_pip_name: diskimage-builder
 # diskimage_builder_pip_version:
 # diskimage_builder_pip_virtualenv_python:
 # diskimage_builder_pip_virtualenv:
+# diskimage_builder_pip_virtualenv_symlink:
